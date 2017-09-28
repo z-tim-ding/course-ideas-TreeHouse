@@ -3,7 +3,9 @@ package com.teamtreehouse.course.model;
 import com.github.slugify.Slugify;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -67,6 +69,10 @@ public class CourseIdea {
 
     public boolean addVoter(String voterUserName) {
         return voters.add(voterUserName);
+    }
+
+    public List<String> getVoters() {
+        return new ArrayList<>(voters);
     }
 
     public int getVoteCount() {
